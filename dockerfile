@@ -1,2 +1,2 @@
 # Use a base image
-FROM alpine:latest
+FROM nginx:alpine
