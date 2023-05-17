@@ -9,3 +9,12 @@ describe('GET /', () => {
     expect(response.status).to.equal(200);
   });
 });
+
+describe('GET /pipelineTest', () => {
+  it('Testing pipeline route', async () => {
+    const response = await request(app).get('/pipelineTest');
+    //
+    expect(response.status).to.equal(300);
+  });
+}
+);
