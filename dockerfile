@@ -1,2 +1,2 @@
-# Use a base image
+# Use a base imaged
 FROM nginx:alpine
