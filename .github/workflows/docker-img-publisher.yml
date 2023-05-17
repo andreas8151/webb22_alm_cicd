@@ -1,6 +1,6 @@
-Publish Docker image
+name: Publish Docker image
 
-on:
+ on:
   push:
     branches:
       - main
