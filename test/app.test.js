@@ -16,5 +16,4 @@ describe('GET /pipelineTest', () => {
     //
     expect(response.status).to.equal(300);
   });
-}
-);
+});
