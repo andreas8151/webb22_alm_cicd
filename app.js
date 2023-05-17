@@ -10,7 +10,7 @@ const calcRouter = require('./routes/calc');
 
 const app = express();
 
-// view engine setup
+// view engine setup here
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
