@@ -1,4 +1,4 @@
-*Installation
+#Installation
 
 To get started, follow these steps:
 
@@ -14,18 +14,18 @@ Install the dependencies:
 
 $ npm install
 
-*Usage
+##Usage
 
 To run the project, use the following command:
 
-*Testing 
+##Testing 
 
 To run the tests, use the following command:
 
 $ npm test
 This will execute the tests written with Mocha and Supertest.
 
-*Linting
+##Linting
 
 To lint the code using ESLint, use the following command:
 
