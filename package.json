@@ -8,7 +8,9 @@
     "eslint": "eslint .",
     "prepare": "husky install",
     "test": "mocha --recursive",
-    "supertest": "supertest"
+    "supertest": "supertest",
+    "coverage": "nyc --reporter=lcov --reporter=text mocha",
+    "commitlint": "commitlint -e"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -19,12 +21,18 @@
     "morgan": "~1.9.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
     "chai": "^4.3.7",
-    "eslint": "^8.40.0",
+    "eslint": "^8.41.0",
     "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.0",
     "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "prettier": "^2.8.8",
     "supertest": "^6.3.3"
   }
 }

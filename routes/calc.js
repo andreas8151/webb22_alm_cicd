@@ -1,5 +1,5 @@
-const express = require('express');
-const { Calculator } = require('../public/javascripts/Calculator');
+const express = require("express");
+const { Calculator } = require("../public/javascripts/Calculator");
 
 const router = express.Router();
 const calc = new Calculator();
@@ -7,7 +7,7 @@ const calc = new Calculator();
 // router.get('/', (req, res, next) => {
 //   res.render('calc', { title: 'Calculator' });
 // });
-router.get('/add/:param1&:param2', (req, res, next) => {
+router.get("/add/:param1&:param2", (req, res, next) => {
   const { param1, param2 } = req.params;
 
   calc.add(Number(param1));

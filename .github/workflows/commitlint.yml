@@ -1,0 +1,8 @@
+rules:
+  "@commitlint/require-enum":
+    [
+      2,
+      "always",
+      ["feat", "fix", "docs", "style", "refactor", "test", "chore", "revert"],
+    ]
+  "@commitlint/subject-case": [2, "always", "sentence-case"]

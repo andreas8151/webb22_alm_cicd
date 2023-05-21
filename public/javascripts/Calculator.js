@@ -1,12 +1,12 @@
 class Calculator {
   constructor() {
     this.calculatorResult = 0;
-    this.hide = ['constructor', 'methods', 'result'];
+    this.hide = ["constructor", "methods", "result"];
   }
 
   methods() {
     return Object.getOwnPropertyNames(Calculator.prototype).filter(
-      (method) => !this.hide.includes(method),
+      (method) => !this.hide.includes(method)
     );
   }
 
