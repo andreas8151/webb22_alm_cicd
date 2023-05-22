@@ -1,8 +1,9 @@
-name: fake branch action 
+name: fake branch action
+
 on:
   push:
     branches-ignore:
-    - main
+      - main
 
 jobs:
   fake-job:
@@ -10,4 +11,6 @@ jobs:
 
     steps:
       - name: echo branch
-        run: "echo now deploying branch: $GITHUB_REF_NAME to the test server"
+        env:
+          NODE_ENV: development
+        run: echo "now deploying branch:$GITHUB_REF_NAME to the test server"
