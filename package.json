@@ -7,7 +7,7 @@
     "lint-fix": "eslint --fix .",
     "eslint": "eslint .",
     "prepare": "husky install",
-    "test": "mocha --recursive",
+    "test": "mocha --recursive --reporter mocha-junit-reporter",
     "supertest": "supertest",
     "coverage": "nyc --reporter=lcov --reporter=text mocha",
     "commitlint": "commitlint -e"
@@ -31,6 +31,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.0",
     "mocha": "^10.2.0",
+    "mocha-junit-reporter": "^2.2.0",
     "nyc": "^15.1.0",
     "prettier": "^2.8.8",
     "supertest": "^6.3.3"
