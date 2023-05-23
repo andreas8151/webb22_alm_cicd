@@ -15,3 +15,9 @@ jobs:
 
       - name: echo main branch
         run: echo "now deploying to production"
+
+      - name: Print Docker image name
+        env:
+          DOCKER_IMAGE: my-image
+        run: |
+          echo "Docker image name: $DOCKER_IMAGE"
