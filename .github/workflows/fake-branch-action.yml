@@ -10,7 +10,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: echo branch
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Mocha and Supertest
+        run: npm run test -- --reporter mocha-junit-reporter --reporter-options mochaFile=test-results.xml
+
+      - name: Upload Test Reports
+        uses: actions/upload-artifact@v2
+        with:
+          name: Test Reports
+          path: test-results.xml
+
+      - name: Deploy to test server
         env:
           NODE_ENV: development
         run: echo "Now deploying branch:${{ github.ref }} to the test server"
