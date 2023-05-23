@@ -21,3 +21,7 @@ jobs:
           DOCKER_IMAGE: my-image
         run: |
           echo "Docker image name: $DOCKER_IMAGE"
+          
+       - name: Print Docker image name
+        run: |
+          echo "Docker image name: ${{ secrets.DOCKER_IMAGE_SECRET }}"
