@@ -13,4 +13,10 @@ jobs:
       - name: echo branch
         env:
           NODE_ENV: development
-        run: echo "now deploying branch:$GITHUB_REF_NAME to the test server"
+        run: echo "Now deploying branch:${{ github.ref }} to the test server"
+
+      - name: Print Docker image name
+        env:
+          DOCKER_IMAGE: my-image
+        run: |
+          echo "Docker image name: $DOCKER_IMAGE"
