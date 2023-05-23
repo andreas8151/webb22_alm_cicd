@@ -18,4 +18,4 @@ jobs:
 
       - name: Run Commitlint
         run: |
-          git log -1 --pretty=format:%s ${{ github.event.before }}..${{ github.event.after }} | npx commitlint
+          git log -1 --pretty=format:%s ${{ github.sha }} | npx commitlint
