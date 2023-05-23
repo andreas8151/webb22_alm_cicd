@@ -1,8 +1,20 @@
-rules:
-  "@commitlint/require-enum":
-    [
-      2,
-      "always",
-      ["feat", "fix", "docs", "style", "refactor", "test", "chore", "revert"],
-    ]
-  "@commitlint/subject-case": [2, "always", "sentence-case"]
+name: Commitlint Check
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  commitlint-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Commitlint
+        run: npm install --save-dev @commitlint/cli
+
+      - name: Run Commitlint
+        run: npx commitlint --from=$GITHUB_SHA^
