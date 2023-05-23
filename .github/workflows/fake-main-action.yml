@@ -1,9 +1,6 @@
 name: main test
 
 on:
-  pull_request:
-    branches:
-      - main
   push:
     branches:
       - main
@@ -30,10 +27,10 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
 
     steps:
       - name: Set NODE_ENV to development
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: echo "NODE_ENV=development" >> $GITHUB_ENV
 
       - name: echo main branch
@@ -54,6 +51,7 @@ jobs:
     permissions:
       packages: write
       contents: read
+    if: github.ref == 'refs/heads/main'
 
     steps:
       - name: Checkout repository
