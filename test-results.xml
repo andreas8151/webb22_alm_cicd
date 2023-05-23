@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites name="Mocha Tests" time="0.023" tests="7" failures="0">
   <testsuite name="Root Suite" timestamp="2023-05-23T13:58:04" tests="0" time="0.000" failures="0">
@@ -33,3 +34,5 @@
     </testcase>
   </testsuite>
 </testsuites>
+=======
+>>>>>>> 5d0afaa00fd739368683a46867ce2acb06afc0bc

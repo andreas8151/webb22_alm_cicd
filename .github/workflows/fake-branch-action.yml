@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Run ESLint
-        run: npm run lint
+        run: npm run eslint
 
       - name: Mocha and Supertest
         run: npm run test -- --reporter mocha-junit-reporter --reporter-options mochaFile=test-results.xml
