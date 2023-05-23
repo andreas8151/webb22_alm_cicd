@@ -17,4 +17,5 @@ jobs:
         run: npm install --save-dev @commitlint/cli
 
       - name: Run Commitlint
-        run: npx commitlint --from=HEAD~1
+        run: |
+          git log -1 --pretty=format:%s ${{ github.event.before }}..${{ github.event.after }} | npx commitlint
