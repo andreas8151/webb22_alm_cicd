@@ -1,2 +1,2 @@
 # Use a base image
-FROM nginx:alpine
+FROM node:alpine
