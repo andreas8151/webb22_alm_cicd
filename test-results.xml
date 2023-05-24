@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="0.024" tests="7" failures="0">
-  <testsuite name="Root Suite" timestamp="2023-05-24T10:23:37" tests="0" time="0.000" failures="0">
+<testsuites name="Mocha Tests" time="0.022" tests="7" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-05-24T10:30:06" tests="0" time="0.000" failures="0">
   </testsuite>
-  <testsuite name="GET /" timestamp="2023-05-24T10:23:37" tests="1" file="/Users/gingerbread/Documents/repo/webb22_alm_cicd/test/app.test.js" time="0.019" failures="0">
-    <testcase name="GET / Testing index endpoint" time="0.018" classname="Testing index endpoint">
+  <testsuite name="GET /" timestamp="2023-05-24T10:30:06" tests="1" file="/Users/gingerbread/Documents/repo/webb22_alm_cicd/test/app.test.js" time="0.018" failures="0">
+    <testcase name="GET / Testing index endpoint" time="0.017" classname="Testing index endpoint">
     </testcase>
   </testsuite>
-  <testsuite name="GET /pipelineTest" timestamp="2023-05-24T10:23:37" tests="1" file="/Users/gingerbread/Documents/repo/webb22_alm_cicd/test/app.test.js" time="0.003" failures="0">
+  <testsuite name="GET /pipelineTest" timestamp="2023-05-24T10:30:06" tests="1" file="/Users/gingerbread/Documents/repo/webb22_alm_cicd/test/app.test.js" time="0.003" failures="0">
     <testcase name="GET /pipelineTest Testing pipeline route" time="0.002" classname="Testing pipeline route">
     </testcase>
   </testsuite>
-  <testsuite name="Calculator" timestamp="2023-05-24T10:23:37" tests="0" file="/Users/gingerbread/Documents/repo/webb22_alm_cicd/test/test.js" time="0.000" failures="0">
+  <testsuite name="Calculator" timestamp="2023-05-24T10:30:06" tests="0" file="/Users/gingerbread/Documents/repo/webb22_alm_cicd/test/test.js" time="0.000" failures="0">
   </testsuite>
-  <testsuite name="multiply()" timestamp="2023-05-24T10:23:37" tests="1" file="/Users/gingerbread/Documents/repo/webb22_alm_cicd/test/test.js" time="0.000" failures="0">
+  <testsuite name="multiply()" timestamp="2023-05-24T10:30:06" tests="1" file="/Users/gingerbread/Documents/repo/webb22_alm_cicd/test/test.js" time="0.000" failures="0">
     <testcase name="Calculator multiply() Should return 0, 0*2" time="0.000" classname="Should return 0, 0*2">
     </testcase>
   </testsuite>
-  <testsuite name="subtract()" timestamp="2023-05-24T10:23:37" tests="1" file="/Users/gingerbread/Documents/repo/webb22_alm_cicd/test/test.js" time="0.000" failures="0">
+  <testsuite name="subtract()" timestamp="2023-05-24T10:30:06" tests="1" file="/Users/gingerbread/Documents/repo/webb22_alm_cicd/test/test.js" time="0.000" failures="0">
     <testcase name="Calculator subtract() Should return -2, 0-2" time="0.000" classname="Should return -2, 0-2">
     </testcase>
   </testsuite>
-  <testsuite name="divide()" timestamp="2023-05-24T10:23:37" tests="1" file="/Users/gingerbread/Documents/repo/webb22_alm_cicd/test/test.js" time="0.001" failures="0">
+  <testsuite name="divide()" timestamp="2023-05-24T10:30:06" tests="1" file="/Users/gingerbread/Documents/repo/webb22_alm_cicd/test/test.js" time="0.000" failures="0">
     <testcase name="Calculator divide() Should return 0, 0/2" time="0.000" classname="Should return 0, 0/2">
     </testcase>
   </testsuite>
-  <testsuite name="add() and subtract()" timestamp="2023-05-24T10:23:37" tests="1" file="/Users/gingerbread/Documents/repo/webb22_alm_cicd/test/test.js" time="0.000" failures="0">
+  <testsuite name="add() and subtract()" timestamp="2023-05-24T10:30:06" tests="1" file="/Users/gingerbread/Documents/repo/webb22_alm_cicd/test/test.js" time="0.001" failures="0">
     <testcase name="Calculator add() and subtract() Should return 2, 0+4-2" time="0.000" classname="Should return 2, 0+4-2">
     </testcase>
   </testsuite>
-  <testsuite name="clearAll()" timestamp="2023-05-24T10:23:37" tests="1" file="/Users/gingerbread/Documents/repo/webb22_alm_cicd/test/test.js" time="0.000" failures="0">
+  <testsuite name="clearAll()" timestamp="2023-05-24T10:30:06" tests="1" file="/Users/gingerbread/Documents/repo/webb22_alm_cicd/test/test.js" time="0.000" failures="0">
     <testcase name="Calculator clearAll() Should return 0" time="0.000" classname="Should return 0">
     </testcase>
   </testsuite>
