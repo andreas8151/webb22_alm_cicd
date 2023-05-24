@@ -12,28 +12,35 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        # Step to check out the repository code
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: "14"
+        # Step to set up Node.js with version 14
 
       - name: Install dependencies
         run: npm install
+        # Step to install project dependencies
 
       - name: Run ESLint
         run: npm run eslint
+        # Step to run ESLint for code linting
 
       - name: Mocha and Supertest
         run: npm run test -- --reporter mocha-junit-reporter --reporter-options mochaFile=test-results.xml
+        # Step to run tests using Mocha and Supertest and generate test results in XML format
 
       - name: Upload Test Reports
         uses: actions/upload-artifact@v2
         with:
           name: Test Reports
           path: test-results.xml
+        # Step to upload the test results artifact
 
       - name: Deploy to test server
         env:
           NODE_ENV: development
         run: echo "Now deploying branch:${{ github.ref }} to the test server"
+        # Step to echo a message indicating the deployment of the branch to the test server

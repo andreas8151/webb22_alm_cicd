@@ -12,18 +12,22 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        # Step to check out the repository code
 
       - name: Install dependencies
         run: npm install
+        # Step to install project dependencies
 
       - name: Mocha and supertest
         run: npm run test -- --reporter mocha-junit-reporter --reporter-options mochaFile=test-results.xml
+        # Step to run tests using Mocha and supertest and generate test results in XML format
 
       - name: Upload Test Reports
         uses: actions/upload-artifact@v2
         with:
           name: Test Reports
           path: test-results.xml
+        # Step to upload the test results artifact
 
   deploy:
     runs-on: ubuntu-latest
@@ -32,19 +36,23 @@ jobs:
     steps:
       - name: Set NODE_ENV to development
         run: echo "NODE_ENV=development" >> $GITHUB_ENV
+        # Step to set the NODE_ENV environment variable to "development"
 
       - name: echo main branch
         run: echo "now deploying to production"
+        # Step to echo a message indicating the deployment to production
 
       - name: Print Docker image name
         env:
           DOCKER_IMAGE: my-image:${{ github.sha }}
         run: echo "Docker image name:$DOCKER_IMAGE"
+        # Step to print the Docker image name using the GitHub SHA as the tag
 
       - name: Print secret
         env:
           DOCKER_IMAGE_SECRET: ${{ secrets.DOCKER_IMAGE_SECRET }}
         run: echo "Docker image secret:$DOCKER_IMAGE_SECRET"
+        # Step to print the Docker image secret stored as a secret in GitHub
 
   publish:
     runs-on: ubuntu-latest
@@ -56,6 +64,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        # Step to check out the repository code
 
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v1
@@ -63,6 +72,7 @@ jobs:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.CR_PAT }}
+        # Step to log in to the GitHub Container Registry using the specified credentials
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
@@ -70,3 +80,4 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/my-image:${{ github.sha }}
+        # Step to build and push the Docker image to the GitHub Container Registry
