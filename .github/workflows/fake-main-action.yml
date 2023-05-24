@@ -38,7 +38,7 @@ jobs:
 
       - name: Print Docker image name
         env:
-          DOCKER_IMAGE: my-image
+          DOCKER_IMAGE: my-image:${{ github.sha }}
         run: echo "Docker image name:$DOCKER_IMAGE"
 
       - name: Print secret
