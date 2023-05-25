@@ -132,3 +132,7 @@ dist
 
 .
 .DS_Store
+
+
+test-reports
+test-results.xml
